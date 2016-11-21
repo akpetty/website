@@ -4,9 +4,13 @@ layout: publication
 author: boisvert, petty, stroeve
 date: 2016-09-19
 journal: Monthly Weather Review
+supplement: Boisvert2016S.pdf
+pdf: Boisvert2016.pdf
+doi: 10.1175/MWR-D-16-0234
 thumbnail: boisvert2016.png
 citation: Boisvert, L.N., A. A. Petty, J. C. Stroeve (2016), The Impact of the Extreme Winter 2015/2016 Arctic Cyclone on the Barents-Kara Seas, Mon. Wea. Rev., 4279, doi:10.1175/MWR-D-16-0234.1.
 alm: true
+
 ---
 
 # Abstract

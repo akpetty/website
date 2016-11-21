@@ -4,6 +4,7 @@ layout: home
 content:
     - news
     - contact
+    - papers
 banner: OIBcrop.jpg
 banner_position: left
 ---

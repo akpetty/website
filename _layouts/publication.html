@@ -142,18 +142,18 @@
                             this.repository}}</a>
                     </li>
                 {% endif %}
-                {% if this.supplement is defined %}
-                    <li class="list-group-item">
-                        {{ fa("paperclip", "fa-fw", "Supplementary material") }}
-                        Data/Supplement:
-                        <a href="http://dx.doi.org/{{this.supplement}}">{{this.supplement}}</a>
-                    </li>
-                {% endif %}
                 {% if this.pdf is defined %}
                     <li class="list-group-item">
                         {{ fa("file-pdf-o", "fa-fw", "Paper PDF") }}
                         PDF:
                         <a href="/pdf/{{this.pdf}}">{{this.pdf}}</a>
+                    </li>
+                {% endif %}
+                {% if this.supplement is defined %}
+                    <li class="list-group-item">
+                       {{ fa("file-pdf-o", "fa-fw", "Paper Supplement PDF") }}
+                        Supplement:
+                        <a href="/pdf/{{this.supplement}}">{{this.supplement}}</a>
                     </li>
                 {% endif %}
                 {% if this.doi is defined %}
@@ -171,19 +171,6 @@
                 {% endif %}
             {% endblock %}
         </ul>
-        {% if this.alm is defined and this.alm %}
-            <h2>Article Level Metrics</h2>
-            {% if this.doi %}
-                <h3>Main article</h3>
-                <div data-badge-details="right" data-badge-type="medium-donut"
-                 data-doi="{{this.doi}}" class="altmetric-embed"></div>
-            {% endif %}
-            {% if this.supplement %}
-                <h3>Data/Supplement</h3>
-                <div data-badge-details="right" data-badge-type="medium-donut"
-                 data-doi="{{this.supplement}}" class="altmetric-embed"></div>
-            {% endif %}
-        {% endif %}
         {% if this.citation is defined %}
             <h2>Citation</h2>
             <p>{{this.citation}}</p>

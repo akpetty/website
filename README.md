@@ -1,3 +1,7 @@
+source activate urubu
+make
+make serve
+http://127.0.0.1:8000
 
 See `environment.yml` for the
 complete dependency list.
