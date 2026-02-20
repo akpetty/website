@@ -1,11 +1,17 @@
-body {
+container {
     font-size: 12pt;
 }
 h1 {
     margin-bottom: 21px;
 }
+h2 {
+    font-weight: bold;
+    font-size: 15pt;
+    margin-bottom: 15px;
+}
 h3 {
-    font-size: 16pt;
+    font-weight: bold;
+    font-size: 14pt;
     margin-bottom: 15px;
 }
 
@@ -131,8 +137,28 @@ p.pub-date-author {
 }
 
 img {
+    width: 130%;
+}
+
+figure {
+   background-color: #fff;
+   padding: 10px;
+   font-size: .875em;
+   display: table;
+   float: left;
+}
+
+figure img {
+    display: block;
     width: 100%;
 }
+
+figcaption {
+    display: table-caption;
+    caption-side: bottom;
+    background: #fff;
+    padding: 0 20px 2px;
+}​
 
 .container-fluid {
     padding: 0;
@@ -148,6 +174,12 @@ img {
     line-height: 60px;
     font-size: 34px;
     font-weight: 300;
+}
+
+.content {
+    height: 10em;
+    padding: 2px; /* adjust to taste */
+    overflow: hidden    
 }
 
 .banner {
@@ -166,4 +198,45 @@ img {
 .alert-blue {
     background-color: #ffffff;
 }
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 35px;
+    height: 0;
+    overflow: hidden;
+}
+
+
+.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Style dataset names (bold tags in paragraphs) to match heading style */
+p > b {
+    font-weight: bold;
+    font-size: 13.5pt;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Indent content under dataset names in data page */
+/* Target paragraphs and lists that follow a paragraph containing a bold tag (dataset name) */
+p:has(> b) ~ p:not(:has(> b)),
+p:has(> b) ~ ul {
+    margin-left: 30px;
+    margin-bottom: 8px;
+}
+
+/* Stop indenting when we hit the next dataset (paragraph with bold) or heading */
+p:has(> b) ~ p:has(> b),
+p:has(> b) ~ h3,
+p:has(> b) ~ h2 {
+    margin-left: 0 !important;
+}
+
 
